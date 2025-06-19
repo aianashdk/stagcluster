@@ -11,7 +11,8 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com:Meru312/stagclustermeru
+  url: https://github.com/Meru312/stagclustermeru
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
