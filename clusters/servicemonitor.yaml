@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: monitoring-prometheus-nginx
+  namespace: nginx
+  labels:
+    app.kubernetes.io/instance: monitoring-prometheus
+    app.kubernetes.io/name: nginx
+    app.kubernetes.io/managed-by: Helm
+    release: monitoring-prometheus
+    helm.toolkit.fluxcd.io/name: prometheus
+    helm.toolkit.fluxcd.io/namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: nginx-nginx
+      app.kubernetes.io/name: nginx
+  namespaceSelector:
+    matchNames:
+      - nginx
+  endpoints:
+    - port: metrics
+      path: /metrics
+      interval: 15s
+      honorLabels: true
