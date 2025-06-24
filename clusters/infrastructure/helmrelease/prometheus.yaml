@@ -66,8 +66,8 @@ spec:
         ingressClassName: nginx
         annotations:
           kubernetes.io/ingress.class: nginx
-        # hosts:
-        #   - prometheus.uat.devkuban.com
+        hosts:
+          - prometheusstag.devkuban.com
       # prometheusSpec:
       #   serviceMonitorSelector: {}
       #   serviceMonitorNamespaceSelector: {}
