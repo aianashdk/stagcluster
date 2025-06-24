@@ -17,6 +17,10 @@ spec:
     createNamespace: true
   targetNamespace: monitoring
   values:
+    nodeExporter:
+      enabled: true
+    kubeStateMetrics:
+      enabled: true
     additionalPrometheusRules:
       - name: basic-cluster-alerts            # becomes metadata.name
         # labels below are optional; they are merged with the chart’s defaults
