@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - ingress-nginx.yaml
   - monitoring.yaml
+  - logging.yaml
  
