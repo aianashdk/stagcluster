@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 8h0m0s
-  path: ./stagcluster/clusters/infrastructure
+  path: ./clusters/infrastructure
   prune: true
   sourceRef:
     kind: GitRepository
